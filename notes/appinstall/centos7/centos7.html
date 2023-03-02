@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CentOS7的安装 | luyurain&#39;s plog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.6d920bc0.css" as="style"><link rel="preload" href="/assets/js/app.5196bcfe.js" as="script"><link rel="preload" href="/assets/js/2.df1d3463.js" as="script"><link rel="preload" href="/assets/js/5.e4008dd9.js" as="script"><link rel="prefetch" href="/assets/js/10.4d762ab6.js"><link rel="prefetch" href="/assets/js/11.247efe58.js"><link rel="prefetch" href="/assets/js/12.e724097f.js"><link rel="prefetch" href="/assets/js/13.7e2e3257.js"><link rel="prefetch" href="/assets/js/14.9a7361ac.js"><link rel="prefetch" href="/assets/js/15.b25c2250.js"><link rel="prefetch" href="/assets/js/16.7eee6fc9.js"><link rel="prefetch" href="/assets/js/17.bffc9794.js"><link rel="prefetch" href="/assets/js/18.9529a1e8.js"><link rel="prefetch" href="/assets/js/3.06456d19.js"><link rel="prefetch" href="/assets/js/4.79214e3e.js"><link rel="prefetch" href="/assets/js/6.502b9bf5.js"><link rel="prefetch" href="/assets/js/7.ba854d57.js"><link rel="prefetch" href="/assets/js/8.e235975a.js"><link rel="prefetch" href="/assets/js/9.e38cb5b0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6d920bc0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="luyurain's plog" class="logo"> <span class="site-name can-hide">luyurain's plog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="安装指南" class="dropdown-title"><span class="title">安装指南</span> <span class="arrow down"></span></button> <button type="button" aria-label="安装指南" class="mobile-dropdown-title"><span class="title">安装指南</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/appinstall/ubuntu/ubuntu.html" class="nav-link">
+  Ubuntu
+</a></li><li class="dropdown-item"><!----> <a href="/notes/appinstall/teamspeak3/teamspeak3.html" class="nav-link">
+  Teamspeak3
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/html/htmlcss.html" class="nav-link">
+  HTML/CSS
+</a></li><li class="dropdown-subitem"><a href="/notes/javascript/javascript.html" class="nav-link">
+  Javascript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/git/git.html" class="nav-link">
+  Git
+</a></li></ul></li></ul></div></div> <a href="https://github.com/luyurain/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="安装指南" class="dropdown-title"><span class="title">安装指南</span> <span class="arrow down"></span></button> <button type="button" aria-label="安装指南" class="mobile-dropdown-title"><span class="title">安装指南</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/appinstall/ubuntu/ubuntu.html" class="nav-link">
+  Ubuntu
+</a></li><li class="dropdown-item"><!----> <a href="/notes/appinstall/teamspeak3/teamspeak3.html" class="nav-link">
+  Teamspeak3
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/html/htmlcss.html" class="nav-link">
+  HTML/CSS
+</a></li><li class="dropdown-subitem"><a href="/notes/javascript/javascript.html" class="nav-link">
+  Javascript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/git/git.html" class="nav-link">
+  Git
+</a></li></ul></li></ul></div></div> <a href="https://github.com/luyurain/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/notes/appinstall/centos7/centos7.html" aria-current="page" class="active sidebar-link">Centos7的安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7.html#软件版本" class="sidebar-link">软件版本</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7.html#安装步骤-暂时无图版-等我下次装吧" class="sidebar-link">安装步骤（暂时无图版，等我下次装吧）</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7.html#网络配置" class="sidebar-link">网络配置</a></li></ul></li><li><a href="/notes/appinstall/centos7/centos7-jdk.html" class="sidebar-link">JDK的安装</a></li><li><a href="/notes/appinstall/centos7/centos7-mysql.html" class="sidebar-link">MYSQL数据库部署和安装</a></li><li><a href="/notes/appinstall/centos7/centos7-tomcat.html" class="sidebar-link">Tomcat安装部署</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="centos7的安装"><a href="#centos7的安装" class="header-anchor">#</a> CentOS7的安装</h1> <blockquote><p><a href="https://www.bilibili.com/read/cv5884033?spm_id_from=333.999.0.0" target="_blank" rel="noopener noreferrer">参考文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <h2 id="软件版本"><a href="#软件版本" class="header-anchor">#</a> 软件版本</h2> <ul><li>物理宿主机系统：Windows 10</li> <li>虚拟机软件：VMware Workstation Pro</li> <li>Linux操作系统ISO镜像：CentOS 7.9 64位</li></ul> <h2 id="安装步骤-暂时无图版-等我下次装吧"><a href="#安装步骤-暂时无图版-等我下次装吧" class="header-anchor">#</a> 安装步骤（暂时无图版，等我下次装吧）</h2> <ol><li>创建新的虚拟机</li> <li>选择虚拟机硬件兼容性</li> <li>加载Linux系统ISO镜像</li> <li>虚拟机命名并存储</li> <li>自定义虚拟机配置
+...</li></ol> <h2 id="网络配置"><a href="#网络配置" class="header-anchor">#</a> 网络配置</h2> <ol><li>设置虚拟机与宿主机的网络连接
+<img src="/assets/img/linux_net1.46a9bb7c.png"></li></ol> <ul><li>选择桥接模式，并选择桥接到物理宿主机的上网网卡：
+<img src="/assets/img/linux_net2.014da0a7.png"></li></ul> <ol start="2"><li>为虚拟机配置固定静态IP</li></ol> <ul><li>首先使用dhclient工具为本机分配一个网络内可用的ip地址
+<img src="/assets/img/linux_net3.40569938.png"></li> <li>接下来编辑虚拟机系统网卡配置，将上面分配所得的IP地址配置进去：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>vim /etc/sysconfig/network-scripts/ifcfg-ens33
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>修改配置如下：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>TYPE=&quot;Ethernet&quot;
+PROXY_METHOD=&quot;none&quot;
+BROWSER_ONLY=&quot;no&quot;
+BOOTPROTO=&quot;static&quot;
+DEFROUTE=&quot;yes&quot;
+IPV4_FAILURE_FATAL=&quot;no&quot;
+IPV6INIT=&quot;yes&quot;
+IPV6_AUTOCONF=&quot;yes&quot;
+IPV6_DEFROUTE=&quot;yes&quot;
+IPV6_FAILURE_FATAL=&quot;no&quot;
+IPV6_ADDR_GEN_MODE=&quot;stable-privacy&quot;
+NAME=&quot;ens33&quot;
+UUID=&quot;37164729-0f4c-4eb3-bf89-5a807ca01b4e&quot;
+DEVICE=&quot;ens33&quot;
+ONBOOT=&quot;yes&quot;
+IPADDR=192.168.3.*    //分配的IP地址
+NETMASK=255.255.255.0
+GATEWAY=192.168.3.1
+DNS1=119.29.29.29
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><ul><li><p>尤其注意下图红色标记部分的配置：
+<img src="/assets/img/linux_net4.6cd923f8.png"></p></li> <li><p>编辑完成，重启网络设置即可：</p></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>systemctl restart network.service
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li><p>检查虚拟机系统网络和外界的连通性</p></li> <li><p>至此，大功告成！</p></li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2/17/2023, 1:21:05 AM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/notes/appinstall/centos7/centos7-jdk.html">
+        JDK的安装
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.5196bcfe.js" defer></script><script src="/assets/js/2.df1d3463.js" defer></script><script src="/assets/js/5.e4008dd9.js" defer></script>
+  </body>
+</html>

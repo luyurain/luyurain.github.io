@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nginx的安装、配置和使用 | luyurain&#39;s plog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.6d920bc0.css" as="style"><link rel="preload" href="/assets/js/app.5196bcfe.js" as="script"><link rel="preload" href="/assets/js/2.df1d3463.js" as="script"><link rel="preload" href="/assets/js/4.79214e3e.js" as="script"><link rel="prefetch" href="/assets/js/10.4d762ab6.js"><link rel="prefetch" href="/assets/js/11.247efe58.js"><link rel="prefetch" href="/assets/js/12.e724097f.js"><link rel="prefetch" href="/assets/js/13.7e2e3257.js"><link rel="prefetch" href="/assets/js/14.9a7361ac.js"><link rel="prefetch" href="/assets/js/15.b25c2250.js"><link rel="prefetch" href="/assets/js/16.7eee6fc9.js"><link rel="prefetch" href="/assets/js/17.bffc9794.js"><link rel="prefetch" href="/assets/js/18.9529a1e8.js"><link rel="prefetch" href="/assets/js/3.06456d19.js"><link rel="prefetch" href="/assets/js/5.e4008dd9.js"><link rel="prefetch" href="/assets/js/6.502b9bf5.js"><link rel="prefetch" href="/assets/js/7.ba854d57.js"><link rel="prefetch" href="/assets/js/8.e235975a.js"><link rel="prefetch" href="/assets/js/9.e38cb5b0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6d920bc0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="luyurain's plog" class="logo"> <span class="site-name can-hide">luyurain's plog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="安装指南" class="dropdown-title"><span class="title">安装指南</span> <span class="arrow down"></span></button> <button type="button" aria-label="安装指南" class="mobile-dropdown-title"><span class="title">安装指南</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/appinstall/ubuntu/ubuntu.html" class="nav-link">
+  Ubuntu
+</a></li><li class="dropdown-item"><!----> <a href="/notes/appinstall/teamspeak3/teamspeak3.html" class="nav-link">
+  Teamspeak3
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/html/htmlcss.html" class="nav-link">
+  HTML/CSS
+</a></li><li class="dropdown-subitem"><a href="/notes/javascript/javascript.html" class="nav-link">
+  Javascript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/git/git.html" class="nav-link">
+  Git
+</a></li></ul></li></ul></div></div> <a href="https://github.com/luyurain/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="安装指南" class="dropdown-title"><span class="title">安装指南</span> <span class="arrow down"></span></button> <button type="button" aria-label="安装指南" class="mobile-dropdown-title"><span class="title">安装指南</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/appinstall/ubuntu/ubuntu.html" class="nav-link">
+  Ubuntu
+</a></li><li class="dropdown-item"><!----> <a href="/notes/appinstall/teamspeak3/teamspeak3.html" class="nav-link">
+  Teamspeak3
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/html/htmlcss.html" class="nav-link">
+  HTML/CSS
+</a></li><li class="dropdown-subitem"><a href="/notes/javascript/javascript.html" class="nav-link">
+  Javascript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/git/git.html" class="nav-link">
+  Git
+</a></li></ul></li></ul></div></div> <a href="https://github.com/luyurain/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/notes/appinstall/ubuntu/ubuntu.html" class="sidebar-link">Ubuntu的安装、部署和配置</a></li><li><a href="/notes/appinstall/ubuntu/nginx.html" aria-current="page" class="active sidebar-link">Nginx的安装、配置和使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/notes/appinstall/ubuntu/nginx.html#nginx的安装" class="sidebar-link">nginx的安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/notes/appinstall/ubuntu/nginx.html#_1、apt-get安装nginx" class="sidebar-link">1、apt-get安装nginx</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/ubuntu/nginx.html#_2、包安装" class="sidebar-link">2、包安装</a></li></ul></li><li class="sidebar-sub-header"><a href="/notes/appinstall/ubuntu/nginx.html#ssl证书安装" class="sidebar-link">SSL证书安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/notes/appinstall/ubuntu/nginx.html#_1、安装acme-sh" class="sidebar-link">1、安装acme.sh</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/ubuntu/nginx.html#_2、对域名进行授权" class="sidebar-link">2、对域名进行授权</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/ubuntu/nginx.html#_3、证书申请-部署" class="sidebar-link">3、证书申请 &amp; 部署</a></li></ul></li></ul></li><li><a href="/notes/appinstall/ubuntu/docker.html" class="sidebar-link">Docker的安装和使用</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="nginx的安装、配置和使用"><a href="#nginx的安装、配置和使用" class="header-anchor">#</a> Nginx的安装、配置和使用</h1> <h2 id="nginx的安装"><a href="#nginx的安装" class="header-anchor">#</a> nginx的安装</h2> <blockquote><p>目前支持两种安装方式，一种是apt-get的方式，另一种是根据包安装的方式</p></blockquote> <h3 id="_1、apt-get安装nginx"><a href="#_1、apt-get安装nginx" class="header-anchor">#</a> 1、apt-get安装nginx</h3> <p>输入安装命令</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>apt-get install nginx
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>查看nginx是否安装成功</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>nginx -v
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>启动nginx</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>service nginx start
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>nginx文件安装完成之后的文件位置：</p> <ul><li>/usr/sbin/nginx：主程序</li> <li>/etc/nginx：存放配置文件</li> <li>/usr/share/nginx：存放静态文件</li> <li>/var/log/nginx：存放日志</li></ul> <h3 id="_2、包安装"><a href="#_2、包安装" class="header-anchor">#</a> 2、包安装</h3> <p>1）安装依赖</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>sudo apt update
+
+sudo apt-get install gcc
+sudo apt-get install ruby
+sudo apt-get install build-essential
+sudo apt-get install libtool
+sudo apt-get install libpcre3 libpcre3-dev
+sudo apt-get install zlib1g-dev
+sudo apt-get install openssl
+sudo apt-get install libssl-dev
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><blockquote><p>或者通过一行命令</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>sudo apt-get install gcc ruby build-essential libtool libpcre3 libpcre3-dev zlib1g-dev libssl-dev
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>2）下载nginx</p> <p><a href="http://nginx.org/en/download.html" target="_blank" rel="noopener noreferrer">下载地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>选择如下稳定版本
+<img src="/assets/img/nginx_download.ee326bfb.png"></p> <p>3）安装步骤</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#进入local文件夹
+cd /usr/local
+
+#创建文件夹,案列地址为 /usr/local/nginx
+sudo mkdir nginx
+
+#进入/nginx
+cd /usr/local/nginx/
+
+#下载安装包
+wget http://nginx.org/download/nginx-1.22.1.tar.gz
+
+#解压nginx-1.22.1.tar.gz
+tar -xvf nginx-1.22.1.tar.gz
+
+#解压后生成nginx-1.22.1文件夹，进入该文件夹
+cd nginx-1.22.1
+
+#设置参数，支持ssl
+./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module
+
+#编译
+sudo make
+
+#安装
+sudo make install
+
+#检测是否安装成功
+cd /usr/local/nginx/sbin
+./nginx -t 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><p>4）配置</p> <h2 id="ssl证书安装"><a href="#ssl证书安装" class="header-anchor">#</a> SSL证书安装</h2> <p><a href="https://normalcoder.com/tech-essay/ssl/automate-ssl-certificate-by-freessl-acme-v2/" target="_blank" rel="noopener noreferrer">参考文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="_1、安装acme-sh"><a href="#_1、安装acme-sh" class="header-anchor">#</a> 1、安装acme.sh</h3> <ul><li>建议切换到root模式，可以减少证书安装时的问题</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>curl https://get.acme.sh | sh -s email=my@example.com
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><blockquote><p>如果上面官方下载地址失败 或者 太慢，可以选用国内的备用地址</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>curl https://gitcode.net/cert/cn-acme.sh/-/raw/master/install.sh?inline=false | sh -s email=my@example.com
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_2、对域名进行授权"><a href="#_2、对域名进行授权" class="header-anchor">#</a> 2、对域名进行授权</h3> <p>1）输入域名
+<img src="/assets/img/nginx_ssl_ym.61f61a87.png"></p> <p>2）获得域名验证（DCV）授权信息
+<img src="/assets/img/nginx_ssl_dcv.b13ddf80.png"></p> <p>3）到您的域名解析服务商添加解析记录，下面以DNSPod为例：
+<img src="/assets/img/nginx_ssl_dns.893dfe6f.png"></p> <h3 id="_3、证书申请-部署"><a href="#_3、证书申请-部署" class="header-anchor">#</a> 3、证书申请 &amp; 部署</h3> <p>1）点击【配置完成，立即检测】后获得证书申请命令
+<img src="/assets/img/nginx_ssl_bs.16ada1cc.png"></p> <p>2）部署到 WebServer</p> <p>Nginx example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>acme.sh --install-cert -d example.com \
+--key-file       /usr/local/nginx/conf/cert/key.pem  \
+--fullchain-file /usr/local/nginx/conf/cert/cert.pem \
+--reloadcmd     &quot;service nginx force-reload&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2/26/2023, 12:58:37 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/notes/appinstall/ubuntu/ubuntu.html" class="prev">
+        Ubuntu的安装、部署和配置
+      </a></span> <span class="next"><a href="/notes/appinstall/ubuntu/docker.html">
+        Docker的安装和使用
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.5196bcfe.js" defer></script><script src="/assets/js/2.df1d3463.js" defer></script><script src="/assets/js/4.79214e3e.js" defer></script>
+  </body>
+</html>

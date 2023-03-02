@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MYSQL数据库部署和安装 | luyurain&#39;s plog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.6d920bc0.css" as="style"><link rel="preload" href="/assets/js/app.5196bcfe.js" as="script"><link rel="preload" href="/assets/js/2.df1d3463.js" as="script"><link rel="preload" href="/assets/js/3.06456d19.js" as="script"><link rel="prefetch" href="/assets/js/10.4d762ab6.js"><link rel="prefetch" href="/assets/js/11.247efe58.js"><link rel="prefetch" href="/assets/js/12.e724097f.js"><link rel="prefetch" href="/assets/js/13.7e2e3257.js"><link rel="prefetch" href="/assets/js/14.9a7361ac.js"><link rel="prefetch" href="/assets/js/15.b25c2250.js"><link rel="prefetch" href="/assets/js/16.7eee6fc9.js"><link rel="prefetch" href="/assets/js/17.bffc9794.js"><link rel="prefetch" href="/assets/js/18.9529a1e8.js"><link rel="prefetch" href="/assets/js/4.79214e3e.js"><link rel="prefetch" href="/assets/js/5.e4008dd9.js"><link rel="prefetch" href="/assets/js/6.502b9bf5.js"><link rel="prefetch" href="/assets/js/7.ba854d57.js"><link rel="prefetch" href="/assets/js/8.e235975a.js"><link rel="prefetch" href="/assets/js/9.e38cb5b0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6d920bc0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="luyurain's plog" class="logo"> <span class="site-name can-hide">luyurain's plog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="安装指南" class="dropdown-title"><span class="title">安装指南</span> <span class="arrow down"></span></button> <button type="button" aria-label="安装指南" class="mobile-dropdown-title"><span class="title">安装指南</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/appinstall/ubuntu/ubuntu.html" class="nav-link">
+  Ubuntu
+</a></li><li class="dropdown-item"><!----> <a href="/notes/appinstall/teamspeak3/teamspeak3.html" class="nav-link">
+  Teamspeak3
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/html/htmlcss.html" class="nav-link">
+  HTML/CSS
+</a></li><li class="dropdown-subitem"><a href="/notes/javascript/javascript.html" class="nav-link">
+  Javascript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/git/git.html" class="nav-link">
+  Git
+</a></li></ul></li></ul></div></div> <a href="https://github.com/luyurain/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="安装指南" class="dropdown-title"><span class="title">安装指南</span> <span class="arrow down"></span></button> <button type="button" aria-label="安装指南" class="mobile-dropdown-title"><span class="title">安装指南</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/appinstall/ubuntu/ubuntu.html" class="nav-link">
+  Ubuntu
+</a></li><li class="dropdown-item"><!----> <a href="/notes/appinstall/teamspeak3/teamspeak3.html" class="nav-link">
+  Teamspeak3
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/html/htmlcss.html" class="nav-link">
+  HTML/CSS
+</a></li><li class="dropdown-subitem"><a href="/notes/javascript/javascript.html" class="nav-link">
+  Javascript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/git/git.html" class="nav-link">
+  Git
+</a></li></ul></li></ul></div></div> <a href="https://github.com/luyurain/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/notes/appinstall/centos7/centos7.html" class="sidebar-link">Centos7的安装</a></li><li><a href="/notes/appinstall/centos7/centos7-jdk.html" class="sidebar-link">JDK的安装</a></li><li><a href="/notes/appinstall/centos7/centos7-mysql.html" aria-current="page" class="active sidebar-link">MYSQL数据库部署和安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#首先准备安装包" class="sidebar-link">首先准备安装包</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#卸载系统自带的mariadb-如果有" class="sidebar-link">卸载系统自带的Mariadb(如果有)</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#解压mysql安装包" class="sidebar-link">解压MYSQL安装包</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#创建mysql用户和用户组" class="sidebar-link">创建MySQL用户和用户组</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#修改mysql目录的归属用户" class="sidebar-link">修改MySQL目录的归属用户</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#准备mysql的配置文件" class="sidebar-link">准备MySQL的配置文件</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#正式开始安装mysql" class="sidebar-link">正式开始安装MySQL</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#复制启动脚本到资源目录" class="sidebar-link">复制启动脚本到资源目录</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#设置mysql系统服务并开启自启动" class="sidebar-link">设置MySQL系统服务并开启自启动</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#启动mysql" class="sidebar-link">启动MySQL</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#将mysql的bin目录加入path环境变量" class="sidebar-link">将MySQL的bin目录加入path环境变量</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#首次登陆mysql" class="sidebar-link">首次登陆MySQL</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#修改root账户密码" class="sidebar-link">修改root账户密码</a></li><li class="sidebar-sub-header"><a href="/notes/appinstall/centos7/centos7-mysql.html#设置远程主机登陆" class="sidebar-link">设置远程主机登陆</a></li></ul></li><li><a href="/notes/appinstall/centos7/centos7-tomcat.html" class="sidebar-link">Tomcat安装部署</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mysql数据库部署和安装"><a href="#mysql数据库部署和安装" class="header-anchor">#</a> MYSQL数据库部署和安装</h1> <h2 id="首先准备安装包"><a href="#首先准备安装包" class="header-anchor">#</a> 首先准备安装包</h2> <ul><li>这里下载的是mysql-5.7.37-linux-glibc2.12-x86_64.tar.gz安装包，并将其放在root目录下</li></ul> <h2 id="卸载系统自带的mariadb-如果有"><a href="#卸载系统自带的mariadb-如果有" class="header-anchor">#</a> 卸载系统自带的Mariadb(如果有)</h2> <ul><li>如果系统之前自带Mariadb，可以先卸载之</li> <li>首先查询已安装的Mariadb安装包</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>rpm -qa|grep mariadb
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><img src="/assets/img/mysql_1.e55d54f7.png"> <ul><li>将其均卸载之</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum -y remove [文件名]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="解压mysql安装包"><a href="#解压mysql安装包" class="header-anchor">#</a> 解压MYSQL安装包</h2> <ul><li>将上面准备好的MySQL安装包解压到/usr/local/目录中，并重新命名mysql</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>tar -zxvf /root/mysql-5.7.37-linux-glibc2.12-x86_64.tar.gz -C /usr/local/
+mv mysql-5.7.37-linux-glibc2.12-x86_64 mysql
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="创建mysql用户和用户组"><a href="#创建mysql用户和用户组" class="header-anchor">#</a> 创建MySQL用户和用户组</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>gruopadd mysql
+useradd -g mysql mysql
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul><li>同时新建/usr/local/mysql/data目录，后续备用</li></ul> <h2 id="修改mysql目录的归属用户"><a href="#修改mysql目录的归属用户" class="header-anchor">#</a> 修改MySQL目录的归属用户</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>(root@localhost mysql)# chown -R mysql:mysql ./
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="准备mysql的配置文件"><a href="#准备mysql的配置文件" class="header-anchor">#</a> 准备MySQL的配置文件</h2> <ul><li>在/etc目录下新建my.cnf文件</li> <li>写入如下简化配置：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[mysql]
+#设置mysql客户端默认字符集
+default-character-set=utf8
+socket=/var/lib/mysql/mysql.sock
+
+[mysqld]
+skip-name-resolve
+#设置3306端口
+port=3306
+socket=/var/lib/mysql/mysql.sock
+#设置mysql安装目录
+basedir=/usr/local/mysql
+#设置mysql数据库的数据的存放目录
+datadir=/usr/local/mysql/data
+#允许最大连接数
+max_connections=200
+#服务端使用的字符集默认为8比特编码的latinl字符集
+character-set-server=utf8
+#创建新表时将使用的默认存储引擎
+default-storage-engine=INNODB
+lower_case_table_names=1
+max_allowed_packet=16M
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><ul><li>同时使用如下命令创建/var/lib/mysql目录，并修改权限：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>mkdir /var/lib/mysql
+chmod 777 /var/lib/mysql
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="正式开始安装mysql"><a href="#正式开始安装mysql" class="header-anchor">#</a> 正式开始安装MySQL</h2> <ul><li>执行如下命令正式安装：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>cd /usr/local/mysql
+./bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><img src="/assets/img/mysql_2.3f1e51e5.png"> <blockquote><p>notice:记住上面打印出来的root的密码，后面首次登陆需要用到</p></blockquote> <h2 id="复制启动脚本到资源目录"><a href="#复制启动脚本到资源目录" class="header-anchor">#</a> 复制启动脚本到资源目录</h2> <ul><li>执行如下命令复制：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost mysql]# cp ./supporrt-files/mysql.server /etc/init.d/mysqld
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>并修改/etc/init.d/mysqld,修改其basedir和datadir为实际对应目录：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>basedir=/usr/local/mysql
+datadir=/usr/local/mysql/data
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="设置mysql系统服务并开启自启动"><a href="#设置mysql系统服务并开启自启动" class="header-anchor">#</a> 设置MySQL系统服务并开启自启动</h2> <ul><li>首先增加mysqld服务控制脚本执行权限：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>chmod +x /etc/init.d/mysqld
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>同时将mysqld服务加入到系统服务</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>chkconfig --add mysqld
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>最后检查mysqld服务是否已经生效即可</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>chkconfig --list mysqld
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><img src="/assets/img/mysql_3.789643b3.png"> <blockquote><p>这就表明mysqld服务已经生效了，在2、3、4、5运行级别随系统启动而自启动，以后就可以直接使用service命令控制mysql的启停。</p></blockquote> <h2 id="启动mysql"><a href="#启动mysql" class="header-anchor">#</a> 启动MySQL</h2> <ul><li>直接执行：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>service mysqld start
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><img src="/assets/img/mysql_4.af9902da.png"> <h2 id="将mysql的bin目录加入path环境变量"><a href="#将mysql的bin目录加入path环境变量" class="header-anchor">#</a> 将MySQL的bin目录加入path环境变量</h2> <ul><li><p>这样方便以后在任何目录下都可以使用mysql提供的命令</p></li> <li><p>编辑~/.bash_profile文件，在文件末尾处追加如下信息：</p></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>export PATH=$PATH:/usr/local/mysql/bin
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><img src="/assets/img/mysql_5.05049e5f.png"> <ul><li>最后执行如下命令使环境变量生效</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>source -/.bash_profile
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="首次登陆mysql"><a href="#首次登陆mysql" class="header-anchor">#</a> 首次登陆MySQL</h2> <ul><li>以root账户登陆mysql，使用上文安装完成提示的密码进行登陆</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql -u root -p
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><img src="/assets/img/mysql_6.553ffc75.png"> <h2 id="修改root账户密码"><a href="#修改root账户密码" class="header-anchor">#</a> 修改root账户密码</h2> <ul><li>在mysql的命令行执行如下命令</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; alter user user() identified by &quot;111111&quot;;
+mysql&gt; flush privileges;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="设置远程主机登陆"><a href="#设置远程主机登陆" class="header-anchor">#</a> 设置远程主机登陆</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; use mysql;
+mysql&gt; update user set user.Host='%' where user.User='root';
+mysql&gt; flush privileges;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>这样就可以利用navicat等工具进行远程访问</p></blockquote></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2/17/2023, 1:21:05 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/notes/appinstall/centos7/centos7-jdk.html" class="prev">
+        JDK的安装
+      </a></span> <span class="next"><a href="/notes/appinstall/centos7/centos7-tomcat.html">
+        Tomcat安装部署
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.5196bcfe.js" defer></script><script src="/assets/js/2.df1d3463.js" defer></script><script src="/assets/js/3.06456d19.js" defer></script>
+  </body>
+</html>
